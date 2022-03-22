@@ -3,6 +3,8 @@
 
 # Gender_based_cleaning_algorithm
 
+![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/nelson123-lab/Gender_based_cleaning_algorithm/issues)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=255)](https://www.linkedin.com/in/nelsonjoseph123/)
 [![Youtube](https://img.shields.io/badge/-Youtube-black.svg?style=flat-square&logo=Youtube&colorB=955)](https://www.youtube.com/channel/UCj-j1k_3vC6F1rVgrEhDF7g)
 
