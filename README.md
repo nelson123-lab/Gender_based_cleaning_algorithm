@@ -7,3 +7,35 @@ This algorithm can be mainly used for cleaning data. It helps in predicting the 
 1. Only the images that contain Human face.
 2. Only the images with Faces of Males.
 3. Only the images with faces of Females.
+
+
+```python
+
+from deepface import DeepFace
+from tqdm import tqdm
+import cv2
+import matplotlib.pyplot as plt
+import time
+import os
+start = time.time()
+# plt.imshow(img[:,:,::-1])
+# plt.show()
+
+dire = r"Location of folder in which all the files are present"
+for img in tqdm(os.listdir(dire)):
+    path = dire+'/'+img
+    try:
+        # print(path)
+        img = cv2.imread(path)
+        result = DeepFace.analyze(img, actions= ['gender'])
+        # print("Gender: ", result['gender'])
+        if result['gender'] != "Man":
+            os.remove(path)
+    except ValueError:
+        os.remove(path)
+print("All is done.")
+time.sleep(1)
+end = time.time()
+print(f"Runtime of the program is {end-start}")
+
+```
