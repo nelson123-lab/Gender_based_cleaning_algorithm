@@ -45,15 +45,31 @@ print(f"Runtime of the program is {end-start}") # To print out the final executi
 ```
 ## Use Cases:-
 
-1. To keep only the images that contain Human face and remove noisy images.
-<p align="center"><img src="https://raw.githubusercontent.com/serengil/deepface/master/icon/deepface-icon-labeled.png" width="200" height="240"></p>
+### 1. To keep only the images that contain Human face and remove noisy images.
 
-2. To keep only the images with Faces of Men.
+<div align="center"><img src="https://github.com/nelson123-lab/Gender_based_cleaning_algorithm/blob/6ab531cc304eaa80d52a02556cf2a75abd2b9845/Data/Unprocessed%20data.png" width="900"/></div>
 
-<p align="center"><img src="https://raw.githubusercontent.com/serengil/deepface/master/icon/deepface-icon-labeled.png" width="200" height="240"></p>
+### Noise in Face data
+<div align="center"><img src="https://github.com/nelson123-lab/Gender_based_cleaning_algorithm/blob/6ab531cc304eaa80d52a02556cf2a75abd2b9845/Data/Noise%20in%20face%20data.png" width="900"/></div>
 
-3. To keep only the images with faces of Females.
-<p align="center"><img src="https://raw.githubusercontent.com/serengil/deepface/master/icon/deepface-icon-labeled.png" width="200" height="240"></p>
+### The folder contains a combination of different images
+
+<div align="center"><img src="https://github.com/nelson123-lab/Gender_based_cleaning_algorithm/blob/6ab531cc304eaa80d52a02556cf2a75abd2b9845/Data/Cleaned_data_all_gender.png" width="900"/></div>
+
+### All images except the ones with human faces are removed
+
+<div align="center"><img src="https://github.com/nelson123-lab/Gender_based_cleaning_algorithm/blob/6ab531cc304eaa80d52a02556cf2a75abd2b9845/Data/Time_taken%20and_count.png" width="900"/></div>
+
+#### Progress bar is shown for understanding the cleaning status. 
+#### Total execution time will be printed out at the end along with the text "All is done".
+
+
+## 2. To keep only the images with Faces of Men.
+
+<div align="center"><img src="https://github.com/nelson123-lab/Gender_based_cleaning_algorithm/blob/6ab531cc304eaa80d52a02556cf2a75abd2b9845/Data/Only%20man.png" width="900"/></div>
+
+## 3. To keep only the images with faces of Females.
+<div align="center"><img src="https://github.com/nelson123-lab/Gender_based_cleaning_algorithm/blob/6ab531cc304eaa80d52a02556cf2a75abd2b9845/Data/Only%20women.png" width="900"/></div>
 
 # Dependency
 Deepface is a lightweight face recognition and facial attribute analysis (age, gender, emotion and race) framework for python. It is a hybrid face recognition framework wrapping state-of-the-art models: VGG-Face, Google FaceNet, OpenFace, Facebook DeepFace, DeepID, ArcFace and Dlib.
