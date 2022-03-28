@@ -59,7 +59,7 @@ The noisy images shown here are not just random images. These are actually image
 
 ### Implementation
 
-We only need to make changes to one line of the script as follows:-
+We only need to make changes to one line of the general script as follows:-
 ```python
 if result['gender'] != "Man" and result['gender'] != "Woman": #change the General script with this line of code.
     os.remove(path)
@@ -109,7 +109,7 @@ No of human faces = 9
 
 ### Implementation
 
-We only need to make changes to one line of the script as follows:-
+We only need to make changes to one line of the general script as follows:-
 ```python
 if result['gender'] != "Man" #change the General script with this line of code.
     os.remove(path)
@@ -123,7 +123,7 @@ After running the script we will obtain the folder consisting of only images of 
 
 ### Implementation
 
-We only need to make changes to one line of the script as follows:-
+We only need to make changes to one line of the general script as follows:-
 ```python
 if result['gender'] != "Woman" #change the General script with this line of code.
     os.remove(path)
