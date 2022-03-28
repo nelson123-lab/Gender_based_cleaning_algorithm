@@ -45,7 +45,7 @@ print(f"Runtime of the program is {end-start}") # To print out the final executi
 ```
 ## Use Cases:-
 
-### 1. To keep only the images that contain Human face and remove noisy images.
+## 1. To keep only the images that contain Human face and remove noisy images.
 
 <div align="center"><img src="https://github.com/nelson123-lab/Gender_based_cleaning_algorithm/blob/6ab531cc304eaa80d52a02556cf2a75abd2b9845/Data/Unprocessed%20data.png" width="900"/></div>
 The folder contains a combination of several images taken from the internet. The files are images of different genders and some corrupted ones. We can use our script to get rid of these noisy images. 
@@ -76,8 +76,36 @@ All images except the ones with human faces are removed
 Progress bar is shown for understanding the cleaning status. 
 Total execution time will be printed out at the end along with the text "All is done".
 
+## 2. To count the no of images with human faces.
 
-## 2. To keep only the images with face of Man.
+The same directory above is used here. To find out the count of images with human faces we need to add a variable count and make some necessary changes.
+
+```python
+from deepface import DeepFace
+from tqdm import tqdm
+import cv2
+import os
+
+dire = r"Location of folder in which all the files are present"
+count = 0 #Initiated count
+for img in tqdm(os.listdir(dire)):
+    path = dire+'/'+img
+    try:
+        img = cv2.imread(path)
+        result = DeepFace.analyze(img, actions= ['gender'])
+        if result['gender'] == "Man" or result['gender'] == "Woman":
+            count += 1 # Count value is incremented when a face is found.
+    except ValueError:
+        pass
+print("No of human faces =",count)
+```
+Output is given as 
+
+```python
+No of human faces = 9
+```
+
+## 3. To keep only the images with face of Man.
 
 ### Implementation
 
@@ -85,13 +113,13 @@ We only need to make changes to one line of the script as follows:-
 ```python
 if result['gender'] != "Man" #change the General script with this line of code.
     os.remove(path)
-
 ```
+
 After running the script we will obtain the folder consisting of only images of man and rest of them removed.
 
 <p align="center"><img src="https://github.com/nelson123-lab/Gender_based_cleaning_algorithm/blob/6ab531cc304eaa80d52a02556cf2a75abd2b9845/Data/Only%20man.png" width="500" height="300"></p>
 
-## 3. To keep only the images with face of Woman.
+## 4. To keep only the images with face of Woman.
 
 ### Implementation
 
