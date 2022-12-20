@@ -49,6 +49,7 @@ print(f"Runtime of the program is {end-start}") # To print out the final executi
 ## 1. To eliminate noisy photos and only keep images with human faces.
 
 <div align="center"><img src="https://github.com/nelson123-lab/Gender_based_cleaning_algorithm/blob/6ab531cc304eaa80d52a02556cf2a75abd2b9845/Data/Unprocessed%20data.png" width="900"/></div>
+
 Multiple photographs taken from the internet are combined in the folder. The files contain photos of various genders, some of which are corrupt. These noisy photos can be removed with the help of our script. 
 
 
