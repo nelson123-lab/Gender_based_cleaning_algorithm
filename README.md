@@ -10,7 +10,7 @@
 [![Medium](https://img.shields.io/badge/-Medium-black.svg?style=flat-square&logo=Medium&colorB=000)](https://medium.com/me/stories/public)
 
 
-This algorithm can be mainly used for cleaning data. It helps in predicting the gender of a given image from the face in the image. If the face is not found, the image gets deleted. We can customize the algorithm according to our needs. 
+Data cleansing is the major use for this algorithm. It aids in determining the gender of an image by looking at the face. The image is erased if the face cannot be located. The algorithm can be altered to suit different requirements.
 
 ## General Script
 
@@ -46,17 +46,17 @@ print(f"Runtime of the program is {end-start}") # To print out the final executi
 ```
 ## Use Cases:-
 
-## 1. To keep only the images that contain Human face and remove noisy images.
+## 1. To eliminate noisy photos and only keep images with human faces.
 
 <div align="center"><img src="https://github.com/nelson123-lab/Gender_based_cleaning_algorithm/blob/6ab531cc304eaa80d52a02556cf2a75abd2b9845/Data/Unprocessed%20data.png" width="900"/></div>
-The folder contains a combination of several images taken from the internet. The files are images of different genders and some corrupted ones. We can use our script to get rid of these noisy images. 
+Multiple photographs taken from the internet are combined in the folder. The files contain photos of various genders, some of which are corrupt. These noisy photos can be removed with the help of our script. 
 
 
 ### Noise in Face data
 
 <p align="center"><img src="https://github.com/nelson123-lab/Gender_based_cleaning_algorithm/blob/e44635725851404a1143618f275c41d1329ddb59/Data/Noise%20in%20face%20data.png" width="400" height="440"></p>
 
-The noisy images shown here are not just random images. These are actually images which contain the features of a face in some way. These are the output of face cropped out from an MTCNN face detector model.
+The noisy images displayed here are not just arbitrary snapshots. In reality, these are pictures that in some way depict the attributes of a face. These are the results of a face detector model using MTCNN that was cropped out.
 
 ### Implementation
 
@@ -70,16 +70,16 @@ After running the script we will obtain the following results as shown below.
 
 <div align="center"><img src="https://github.com/nelson123-lab/Gender_based_cleaning_algorithm/blob/6ab531cc304eaa80d52a02556cf2a75abd2b9845/Data/Cleaned_data_all_gender.png" width="900"/></div>
 
-All images except the ones with human faces are removed
+The only photographs left are those with human faces.
 
 <div align="center"><img src="https://github.com/nelson123-lab/Gender_based_cleaning_algorithm/blob/6ab531cc304eaa80d52a02556cf2a75abd2b9845/Data/Time_taken%20and_count.png" width="900"/></div>
 
 Progress bar is shown for understanding the cleaning status. 
 Total execution time will be printed out at the end along with the text "All is done".
 
-## 2. To count the no of images with human faces.
+## 2. To determine how many photos contain human faces.
 
-The same directory above is used here. To find out the count of images with human faces we need to add a variable count and make some necessary changes.
+This uses the same directory as above. We must add a variable count and make the appropriate adjustments in order to determine the number of photos that contain human faces.
 
 ```python
 from deepface import DeepFace
@@ -106,7 +106,7 @@ Output is given as
 No of human faces = 9
 ```
 
-## 3. To keep only the images with face of Man.
+## 3. To only save pictures with male faces.
 
 ### Implementation
 
@@ -116,11 +116,11 @@ if result['gender'] != "Man" #change the General script with this line of code.
     os.remove(path)
 ```
 
-After running the script we will obtain the folder consisting of only images of man and rest of them removed.
+After executing the script, we will receive a folder with only photographs of men in it and the rest empty.
 
 <p align="center"><img src="https://github.com/nelson123-lab/Gender_based_cleaning_algorithm/blob/6ab531cc304eaa80d52a02556cf2a75abd2b9845/Data/Only%20man.png" width="500" height="300"></p>
 
-## 4. To keep only the images with face of Woman.
+## 4. To only save pictures of women's faces.
 
 ### Implementation
 
@@ -130,12 +130,13 @@ if result['gender'] != "Woman" #change the General script with this line of code
     os.remove(path)
 
 ```
-After running the script we will obtain the folder consisting of only images of woman and rest of them removed.
+After executing the script, we will receive a folder with just photographs of women in it, with the rest of the images being deleted.
+
 <div align="center"><img src="https://github.com/nelson123-lab/Gender_based_cleaning_algorithm/blob/6ab531cc304eaa80d52a02556cf2a75abd2b9845/Data/Only%20women.png" width="900"/></div>
 
 # Dependency Installation
 
-The easiest way to install the required libraries is to download it from [`PyPI`](https://pypi.org/). It's going to install the libraries itself and its prerequisites as well. 
+The essential libraries can be downloaded from ['PyPI'](https://pypi.org/) for installation. The libraries themselves as well as their requirements will be installed.
 
 ```python
 pip install deepface
